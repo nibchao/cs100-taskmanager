@@ -12,9 +12,9 @@
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * [toolname](link) - Short description
 
- > The project we chose to do is a task manager. We chose this project because it was the most useful out of the given project options and could see use outside of this class to increase our productivity. 
- > We plan to use C++ to create this task manager project. 
- > The input of this project is the user being able to create tasks and task lists, along with editing any of these created tasks or task lists. The output of the project should be a way for the user to visualize all of their created tasks or task lists. The tasks will have the following customizable options: title, description, classification, priority, duration and due date; some will be optional and some will be required.  
+ > * The project we chose to do is a task manager. We chose this project because it was the most useful out of the given project options and could see use outside of this class to increase our productivity. 
+ > * We plan to use C++ to create this task manager project. 
+ > * The input of this project is the user being able to create tasks and task lists, along with editing any of these created tasks or task lists. The output of the project should be a way for the user to visualize all of their created tasks or task lists. The tasks will have the following customizable options: title, description, classification, priority, duration and due date; some will be optional and some will be required.  
 
 
  > ## Phase II
