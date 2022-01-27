@@ -1,6 +1,6 @@
 # Task Manager
  
- > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [name](https://github.com/USER), [name](https://github.com/USER)
+ > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [Denitca Grozeva](https://github.com/DeniGroz), [name](https://github.com/USER)
 
  
  > ## Expectations
