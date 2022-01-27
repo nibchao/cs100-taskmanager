@@ -11,6 +11,8 @@
 ## Project Description
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * [toolname](link) - Short description
+ >  We will be using the linux terminal along with github. This includes the tools and resources in them.
+ >  The language(s) use(d): C++
 
  > * The project we chose to do is a task manager. We chose this project because it was the most useful out of the given project options and could see use outside of this class to increase our productivity. 
  > * We plan to use C++ to create this task manager project. 
