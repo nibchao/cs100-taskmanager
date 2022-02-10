@@ -24,9 +24,11 @@
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
-
-## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+ >    
+![Alt text](https://raw.githubusercontent.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/master/cs100-final-project-task-manager-class-diagram.png?token=GHSAT0AAAAAABNSCLWDGJODXDBVZTL4T2YUYQNY25Q)
+- This is our rough UML diagram for what we think we'll create to make the Task Manager. 
+- If all of these classes are implemented correctly, then all the notes in the backlog category on the kanban board will be completed. 
+- There is a main class that handles displaying the tasks and tasklists, the TaskList class that handles all TaskList operations, printTask and undoDelete classes that are interfaces for each task classification type, the generalTask class handles all Task operations and also has three classes that inherit from it to create each type of task classification.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with a reader (using Calendly). Your entire team must be present. This meeting will occur on week 8 but NOT during lab time.
