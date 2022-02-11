@@ -1,30 +1,16 @@
 # Task Manager
  
- > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [Denitca Grozeva](https://github.com/DeniGroz), [name](https://github.com/USER)
+ > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [Denitca Grozeva](https://github.com/DeniGroz), [Edgar Tapia](https://github.com/USER)
 
 ## Project Description
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * We will be using the Linux terminal along with GitHub. This includes the tools and resources in them. 
- >   * The language we will use is C++.
-
+ > * We will be using the Linux terminal along with GitHub. This includes the tools and resources in them. 
+ > * The language we will use is C++.
  > * The project we chose to do is a task manager. We chose this project because it was the most useful out of the given project options and could see use outside of this class to increase our productivity. 
  > * We plan to use C++ to create this task manager project. 
  > * The input of this project is the user being able to create tasks and task lists, along with editing any of these created tasks or task lists. The output of the project should be a way for the user to visualize all of their created tasks or task lists. 
  >   * The tasks will have the following customizable options: title, description, classification, priority, duration and due date; some will be optional and some will be required.  
-
-
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to:
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller actionable development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 8. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
- >    
+ 
+ ## UML Class Diagram
 ![Alt text](https://raw.githubusercontent.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/master/cs100-final-project-task-manager-class-diagram.png?token=GHSAT0AAAAAABNSCLWDGJODXDBVZTL4T2YUYQNY25Q)
 - This is our rough UML diagram for what we think we'll create to make the Task Manager. 
 - If all of these classes are implemented correctly, then all the notes in the backlog category on the kanban board will be completed. 
