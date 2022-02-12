@@ -1,6 +1,6 @@
 # Task Manager
  
- > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [Denitca Grozeva](https://github.com/DeniGroz), [Edgar Tapia](https://github.com/USER)
+ > Authors: [Nicholas Chao](https://github.com/nibchao), [Jorge Gonzalez Quiroz](https://github.com/JorgeNova-1), [Denitca Grozeva](https://github.com/DeniGroz), [Edgar Tapia](https://github.com/Etapi017)
 
 ## Project Description
  > * We will be using the Linux terminal along with GitHub. This includes the tools and resources in them. 
