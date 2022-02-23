@@ -11,7 +11,7 @@
  >   * The tasks will have the following customizable options: title, description, classification, priority, duration and due date; some will be optional and some will be required.  
  
  ## UML Class Diagram
-![Alt text](https://raw.githubusercontent.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/master/cs100-final-project-task-manager-class-diagram.png?token=GHSAT0AAAAAABNSCLWDGJODXDBVZTL4T2YUYQNY25Q)
+![Alt text](https://raw.githubusercontent.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/master/cs100%20final%20project%20UML%20diagram.png?token=GHSAT0AAAAAABNSCLWDZRBWKKG2IUOHCGP6YQ6WNWA)
 - This is our rough UML diagram for what we think we'll create to make the Task Manager. 
 - If all of these classes are implemented correctly, then all the notes in the backlog category on the kanban board will be completed. 
 - There is a main class that handles displaying the tasks and tasklists, the TaskList class that handles all TaskList operations, printTask and undoDelete classes that are interfaces for each task classification type, the generalTask class handles all Task operations and also has three classes that inherit from it to create each type of task classification.
