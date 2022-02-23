@@ -16,7 +16,7 @@ public:
 	~StudyTask(){delete this;}
 	
 	virtual void setClassification(std::string classif){
-		this->editClassification(classif); }
+		this.editClassification(classif); }
 		//general task not yet implemented so subject to change
 }
 
