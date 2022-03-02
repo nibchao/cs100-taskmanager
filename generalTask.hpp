@@ -2,6 +2,7 @@
 #define __GENERALTASK_HPP__
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
