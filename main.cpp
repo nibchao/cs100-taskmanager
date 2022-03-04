@@ -54,7 +54,7 @@ int main()
 				}
 				break;
 			case 2: // prints the tasks in the tasklist
-				cout << "print all tasks here" << endl << endl;
+				cout << "Printing all tasks in the task list." << endl;
 				TaskList->printTaskList();
 				break;
 			case 9:
@@ -66,10 +66,8 @@ int main()
 				cin.ignore(10000, '\n');
 				break;
 		}	
-	
 	}
 	while (input != 9);
-
 	delete TaskList;
 	return 0;
 }
