@@ -19,7 +19,7 @@ string getTaskDate();
 
 int main()
 {
-	TaskList* tasklist = new TaskList();
+	TaskList* TaskList = new TaskList();
 	string title = "";
 	string description = "";
 	string classification = "";
