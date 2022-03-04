@@ -3,18 +3,20 @@
 
 #include <iostream>
 #include <vector>
-// #include "generalTask.hpp" uncomment this in the future
+#include "generalTask.hpp"
+#include "generalTask.cpp"
+#include "WorkTasks.h"
+#include "PrintTasks.h"
+#include "studytask.hpp"
 
 using namespace std;
 
 class TaskList
 {
 	private:
-		vector<int> TaskList; //  temporary line while generalTask is not implemented yet
-		// vector<generalTask*> TaskList; uncomment this when generalTask is implemented
+		vector<generalTask*> TaskList;
 	public:
 		TaskList() { }
-
 		~TaskList()
 		{
 			for (int cnt = 0; cnt < TaskList.size(); cnt++)
@@ -22,9 +24,6 @@ class TaskList
 				delete TaskList[cnt];
 			}
 		}
-
-		void printTask() { };
-
 		void printTaskList()
 		{
 			for (int cnt = 0; cnt < TaskList.size(); cnt++)
@@ -32,17 +31,10 @@ class TaskList
 				TaskList.at(cnt)->printTask();
 			}
 		}
-
 		void createTaskList(TaskList* taskListPointer)
 		{
 			TaskList.push_back(taskListPointer);
 		}
-
-		void deleteTaskList()
-		{
-			~TaskList();
-		}
-
 		void createPersonalTask(PersonalTask* personalTaskPointer)
 		{
 			TaskList.push_back(new PersonalTask(personalTaskPointer));
@@ -51,7 +43,6 @@ class TaskList
 		{
 			delete personalTaskPointer;
 		}
-
 		void createWorkTask(WorkTask* workTaskPointer)
 		{
 			TaskList.push_back(new WorkTask(workTaskPointer));
@@ -60,7 +51,6 @@ class TaskList
 		{
 			delete workTaskPointer;
 		}
-
 		void createStudyTask(StudyTask* studyTaskPointer)
 		{
 			TaskList.push_back(new StudyTask(studyTaskPointer));
