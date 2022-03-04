@@ -123,7 +123,7 @@ string getTaskClassification()
 		taskClassification != "Study" && taskClassification != "study")
 	{
 		cout << endl << "Error: Invalid classification. Accepted classifications are [Personal, Work, Study]." << endl << endl;
-		cout >> "Enter the task classification: ";
+		cout << "Enter the task classification: ";
 		getline(cin, taskClassification);
 	}
 	cout << endl;
@@ -149,6 +149,7 @@ int getTaskPriority()
 		cout << endl << "Error: Invalid task priority. Task priority must be a value greater than 0." << endl;
 		cout << endl << "Enter the task priority: ";
 	}
+	cout << endl;
 	return taskPriority;
 }
 
@@ -171,6 +172,7 @@ int getTaskDuration()
 		cout << endl << "Error: Invalid task duration. Task duration must be a value greater than 0 minutes." << endl;
 		cout << endl << "Enter the task duration (how many minutes it will take): ";
 	}
+	cout << endl;
 	return taskDuration;
 }
 
