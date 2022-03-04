@@ -53,13 +53,9 @@ int main()
 					TaskList->createStudyTask(new StudyTask(title, description, classification, priority, duration, date);
 				}
 				break;
-			case 2:
-				// print task stuff
+			case 2: // prints the tasks in the tasklist
 				cout << "print all tasks here" << endl << endl;
-				break;
-			case 3:
-				// print tasklist stuff
-				cout << "print all tasklists here" << endl << endl;
+				TaskList->printTaskList();
 				break;
 			case 9:
 				cout << "Ending task manager." << endl << endl; 
@@ -74,6 +70,7 @@ int main()
 	}
 	while (input != 9);
 
+	delete TaskList;
 	return 0;
 }
 
@@ -83,9 +80,7 @@ int printMainMenu()
 	cout << "===Task Manager Main Menu===" << endl;
 	cout << "1) Add a task" << endl;
 	cout << "2) Print all tasks" << endl;
-	cout << "3) Print all tasklists" << endl;
 	cout << "9) End program" << endl;	
-
 
 	cout << "Enter menu option: ";
 	cin >> input;
