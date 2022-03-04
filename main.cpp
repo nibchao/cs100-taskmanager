@@ -115,10 +115,17 @@ string getTaskDescription()
 
 string getTaskClassification()
 {
-	// add validation for only accepting personal, work, study as strings
 	string taskClassification = "";
 	cout << "Enter the task classification: ";
 	getline(cin, taskClassification);
+	while (taskClassification != "Personal" && taskClassification != "personal" &&
+		taskClassification != "Work" && taskClassification != "work" &&
+		taskClassification != "Study" && taskClassification != "study")
+	{
+		cout << endl << "Error: Invalid classification. Accepted classifications are [Personal, Work, Study]." << endl << endl;
+		cout >> "Enter the task classification: ";
+		getline(cin, taskClassification);
+	}
 	cout << endl;
 	return taskClassification;
 }
