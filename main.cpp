@@ -68,6 +68,7 @@ int main()
 		}	
 	}
 	while (input != 9);
+	TaskList.~TaskList();
 	delete TaskList;
 	return 0;
 }
