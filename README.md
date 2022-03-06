@@ -6,8 +6,8 @@
  > * We will be using the Linux terminal along with GitHub. This includes the tools and resources in them. 
  > * The language we will use is C++.
  > * The project we chose to do is a task manager. We chose this project because it was the most useful out of the given project options and could see use outside of this class to increase our productivity.
- > * The input of this project is the user being able to create tasks and task lists, along with editing any of these created tasks or task lists. The output of the project should be a way for the user to visualize all of their created tasks or task lists. 
- >   * The tasks will have the following customizable options: title, description, classification, priority, duration and due date; some will be optional and some will be required.  
+ > * The input of this project is the user being able to create and edit a task. The output of the project should be a list of all the tasks the user created along with the relevant information for each task.
+ >   * The tasks will have the following customizable options: title, description, classification, priority, duration and due date.
  
  ## UML Class Diagram
 ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/cs100%20final%20project%20UML%20diagram.png?raw=true)
@@ -15,7 +15,7 @@
 
 - This is our UML diagram for what we think we'll create to make the Task Manager. 
 - If all of these classes are implemented correctly, then all the notes in the backlog category on the kanban board should be completed. 
-- The main class creates a main menu that prompts the user for various inputs and should be used to display the created tasks lists and tasks. The TaskList class handles all TaskList specific operations and the generalTask class handles all Task specific operations which includes the three classes that inherit from it to create each type of task classification. The PrintTask class handles the printing of each task classification which should display the information in each task.
+- The main class creates a main menu that prompts the user for various inputs and should be used to display the created tasks. The TaskList class handles all TaskList specific operations and the generalTask class handles all Task specific operations which includes the three classes that inherit from it to create each type of task classification. The PrintTask class handles the printing of each task classification which should display the information in each task.
  
  ## Design Patterns
  > The design pattern we plan to use and implement is the strategy design pattern. 
