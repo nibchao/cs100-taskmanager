@@ -31,10 +31,6 @@ class TaskList
 				TaskList.at(cnt)->printTask();
 			}
 		}
-		void createTaskList(TaskList* taskListPointer)
-		{
-			TaskList.push_back(taskListPointer);
-		}
 		void createPersonalTask(PersonalTask* personalTaskPointer)
 		{
 			TaskList.push_back(new PersonalTask(personalTaskPointer));
