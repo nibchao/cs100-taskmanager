@@ -19,7 +19,7 @@ string getTaskDate();
 
 int main()
 {
-	TaskList* TaskList = new TaskList();
+	TaskList* tasklist = new TaskList();
 	string title = "";
 	string description = "";
 	string classification = "";
@@ -40,22 +40,22 @@ int main()
 				duration = getTaskDuration();
 				date = getTaskDate();
 				classification = getTaskClassification();
-				if (classification == "Personal")
+				if (classification == "Personal" || classification == "personal")
 				{
-					TaskList->createPersonalTask(new PersonalTask(title, description, classification, priority, duration, date);
+					tasklist->createPersonalTask(new PersonalTask(title, description, classification, priority, duration, date);
 				}
-				else if (classification == "Work")
+				else if (classification == "Work" || classification == "work")
 				{
-					TaskList->createWorkTask(new WorkTask(title, description, classification, priority, duration, date);
+					tasklist->createWorkTask(new WorkTask(title, description, classification, priority, duration, date);
 				}
-				else if (classification == "Study")
+				else if (classification == "Study" || classification == "study")
 				{
-					TaskList->createStudyTask(new StudyTask(title, description, classification, priority, duration, date);
+					tasklist->createStudyTask(new StudyTask(title, description, classification, priority, duration, date);
 				}
 				break;
 			case 2: // prints the tasks in the tasklist
 				cout << "Printing all tasks in the task list." << endl;
-				TaskList->printTaskList();
+				tasklist->printTaskList();
 				break;
 			case 9:
 				cout << "Ending task manager." << endl << endl; 
@@ -68,8 +68,8 @@ int main()
 		}	
 	}
 	while (input != 9);
-	TaskList.~TaskList();
-	delete TaskList;
+	//TaskList.~TaskList();
+	delete tasklist;
 	return 0;
 }
 
