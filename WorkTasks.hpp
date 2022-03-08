@@ -1,6 +1,6 @@
 #ifndef __WORKTASKS_HPP__
 #define __WORKTASKS_HPP__
-
+#include "generalTask.hpp"
 #inlcude <string>
 #include <iostream>
 using namespace std;
@@ -15,7 +15,7 @@ public:
 
 	WorkTasks();
 	
-	WorkTasks(string task_A, string task_B, string task_C, int urgency, int, string task_Status){}
+	WorkTasks(string task_A, string task_B, string task_C, int urgency, int, string task_Status){} : generalTask(task_a, task_b, task_c, task_d), urgency(urgency_e), condition(task_F){}
 	
 	~WorkTasks(){
 		condition.clear();
