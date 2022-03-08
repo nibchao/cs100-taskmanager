@@ -1,5 +1,5 @@
-#ifndef __WORKTASKS_H__
-#define __WORKTASKS_H__
+#ifndef __WORKTASKS_HPP__
+#define __WORKTASKS_HPP__
 
 
 class WorkTasks{
