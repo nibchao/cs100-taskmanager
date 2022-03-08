@@ -66,6 +66,3 @@ void generalTask::editDate(string newDate)
 {
 	date = newDate;
 }
-
-virtual void generalTask::printTask() const = 0;
-virtual void generalTask::setClassification() const = 0;

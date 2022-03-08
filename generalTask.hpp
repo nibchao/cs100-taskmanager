@@ -30,8 +30,8 @@ class generalTask
 		void editPriority(int);
 		void editDuration(int);
 		void editDate(string);
-		virtual void printTask() const = 0;
-		virtual void setClassification() const = 0;
+		virtual void printTask() = 0;
+		virtual void setClassification() = 0;
 }
 
 #endif
