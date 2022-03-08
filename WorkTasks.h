@@ -1,21 +1,29 @@
-ifndef WORKTASKS_H
-#endif WORKTASKS_H
+#ifndef __WORKTASKS_H__
+#define __WORKTASKS_H__
 
-#define
 
 class WorkTasks{
 private:
-	int rate;
-	string state;
+	int urgency;
+	string condition;
 
 public:
 
-	WorkTasks();
+	//WorkTasks();
 	
-	WorkTasks(string, string, string, int , int, string){}
+	WorkTasks(string task_A, string task_B, string task_C, int urgency, int, string task_Status){}
+	
 	~WorkTasks(){
-		state.clear();
+		condition.clear();
 	}
+	
+	void howImportant(int);
+	
+	void whatStatus(string);
+	
+	int getUrgency();
+	
+	string getCurrentCondition();
 
 };
 
