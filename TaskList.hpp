@@ -14,26 +14,26 @@ using namespace std;
 class TaskList
 {
 	private:
-		vector<generalTask*> TaskList;
+		vector<generalTask*> tasklist;
 	public:
 		TaskList() { }
 		~TaskList()
 		{
-			for (int cnt = 0; cnt < TaskList.size(); cnt++)
+			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
-				delete TaskList[cnt];
+				delete tasklist[cnt];
 			}
 		}
 		void printTaskList()
 		{
-			for (int cnt = 0; cnt < TaskList.size(); cnt++)
+			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
-				TaskList.at(cnt)->printTask();
+				tasklist.at(cnt)->printTask();
 			}
 		}
 		void createPersonalTask(PersonalTask* personalTaskPointer)
 		{
-			TaskList.push_back(new PersonalTask(personalTaskPointer));
+			tasklist.push_back(personalTaskPointer);
 		}
 		void deletePersonalTask(PersonalTask* personalTaskPointer)
 		{
@@ -41,7 +41,7 @@ class TaskList
 		}
 		void createWorkTask(WorkTask* workTaskPointer)
 		{
-			TaskList.push_back(new WorkTask(workTaskPointer));
+			tasklist.push_back(workTaskPointer);
 		}
 		void deleteWorkTask(WorkTask* workTaskPointer)
 		{
@@ -49,7 +49,7 @@ class TaskList
 		}
 		void createStudyTask(StudyTask* studyTaskPointer)
 		{
-			TaskList.push_back(new StudyTask(studyTaskPointer));
+			tasklist.push_back(studyTaskPointer);
 		}
 		void deleteStudyTask(StudyTask* studyTaskPointer)
 		{
