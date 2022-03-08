@@ -1,15 +1,19 @@
 #ifndef __WORKTASKS_HPP__
 #define __WORKTASKS_HPP__
 
+#inlcude <string>
+#include <iostream>
+using namespace std;
 
 class WorkTasks{
+	
 private:
 	int urgency;
 	string condition;
 
 public:
 
-	//WorkTasks();
+	WorkTasks();
 	
 	WorkTasks(string task_A, string task_B, string task_C, int urgency, int, string task_Status){}
 	
