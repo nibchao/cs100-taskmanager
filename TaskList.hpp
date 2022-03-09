@@ -3,11 +3,18 @@
 
 #include <iostream>
 #include <vector>
+
 #include "generalTask.hpp"
 #include "generalTask.cpp"
+
 #include "WorkTasks.h"
-#include "PrintTasks.h"
+#include "PersonalTask.hpp"
 #include "studytask.hpp"
+
+#include "printPersonal.hpp"
+#include "printWork.hpp"
+#include "printStudy.hpp"
+#include "printTasks.hpp"
 
 using namespace std;
 
