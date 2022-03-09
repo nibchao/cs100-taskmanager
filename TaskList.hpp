@@ -15,6 +15,7 @@ class TaskList
 {
 	private:
 		vector<generalTask*> tasklist;
+		vector<printTasks*> printtask;
 	public:
 		TaskList() { }
 		~TaskList()
@@ -22,18 +23,20 @@ class TaskList
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
 				delete tasklist[cnt];
+				delete printtask[cnt];
 			}
 		}
 		void printTaskList()
 		{
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
-				tasklist.at(cnt)->printTask();
+				printtask.at(cnt)->printTask();
 			}
 		}
 		void createPersonalTask(PersonalTask* personalTaskPointer)
 		{
 			tasklist.push_back(personalTaskPointer);
+			printtask.push_back(new printPersonal(personalTaskPointer));
 		}
 		void deletePersonalTask(PersonalTask* personalTaskPointer)
 		{
@@ -42,6 +45,7 @@ class TaskList
 		void createWorkTask(WorkTask* workTaskPointer)
 		{
 			tasklist.push_back(workTaskPointer);
+			printtask.push_back(new printWork(workTaskPointer));
 		}
 		void deleteWorkTask(WorkTask* workTaskPointer)
 		{
@@ -50,6 +54,7 @@ class TaskList
 		void createStudyTask(StudyTask* studyTaskPointer)
 		{
 			tasklist.push_back(studyTaskPointer);
+			printtask.push_back(new printStudy(studyTaskPointer));
 		}
 		void deleteStudyTask(StudyTask* studyTaskPointer)
 		{
