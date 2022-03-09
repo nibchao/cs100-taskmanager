@@ -10,9 +10,14 @@ class printWork : public printTasks
                 WorkTask* pointer;
         public:
                 printWork(WorkTask* ptr): pointer(ptr) { }
-                void print()
+		void print()
                 {
-                        cout << pointer->getTitle() << "work task temp";
+                        cout << pointer->getTitle() << endl;
+                        cout << pointer->getDescription() << endl;
+                        cout << pointer->getClassification() << endl;
+                        cout << pointer->getPriority() << endl;
+                        cout << pointer->getDuration() << endl;
+                        cout << pointer->getDate() << endl << endl;
                 }
 };
 

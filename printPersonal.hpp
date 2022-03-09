@@ -12,7 +12,12 @@ class printPersonal : public printTasks
 		printPersonal(PersonalTask* ptr): pointer(ptr) { }
 		void print()
 		{
-			cout << pointer->getTitle() << "personal task temp";
+			cout << pointer->getTitle() << endl;
+			cout << pointer->getDescription() << endl;
+			cout << pointer->getClassification() << endl;
+			cout << pointer->getPriority() << endl;
+			cout << pointer->getDuration() << endl;
+			cout << pointer->getDate() << endl << endl;
 		}
 };
 
