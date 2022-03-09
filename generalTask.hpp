@@ -31,7 +31,7 @@ class generalTask
 		void editDuration(int);
 		void editDate(string);
 		virtual void printTask() = 0;
-		virtual void setClassification() = 0;
-}
+		virtual void setClassification(string) = 0;
+};
 
 #endif
