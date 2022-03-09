@@ -7,9 +7,11 @@
 #include "generalTask.hpp"
 #include "generalTask.cpp"
 
+//#include "WorkTasks.hpp"
 #include "WorkTasks.h"
 #include "PersonalTask.hpp"
 #include "studytask.hpp"
+//#include "StudyTask.hpp"
 
 #include "printPersonal.hpp"
 #include "printWork.hpp"
@@ -37,7 +39,7 @@ class TaskList
 		{
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
-				printtask.at(cnt)->printTask();
+				printtask.at(cnt)->print();
 			}
 		}
 		void createPersonalTask(PersonalTask* personalTaskPointer)
