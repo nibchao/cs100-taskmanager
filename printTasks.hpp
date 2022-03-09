@@ -8,10 +8,7 @@ using namespace std;
 
 class printTasks
 {
-	private:
-		generalTask* pointer;
 	public:
-		printTasks(generalTask* ptr) { }
 		virtual void print() = 0;
 };
 
