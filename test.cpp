@@ -1,5 +1,8 @@
 #include "gtest/gtest.h"
 
+#include "TaskList.hpp"
+#include "printTasks.hpp"
+
 #include "WorkTask.cpp"
 #include "personalTask.cpp"
 #include "generalTask.cpp"
@@ -8,6 +11,39 @@
 #include <string>
 
 using namespace std;
+
+TEST(TaskListTest, printBlankTaskList)
+{
+	TaskList TaskList;
+	TaskList.printTaskList();
+}
+
+TEST(TaskListTest, printPersonalTask)
+{
+	TaskList TaskList;
+	PersonalTask* task = new PersonalTask("p task title", "p task description", "March 11");
+	TaskList.createPersonalTask(task);
+	TaskList.printTaskList();
+  delete task;
+}
+
+TEST(TaskListTest, printWorkTask)
+{
+	TaskList TaskList;
+	WorkTask* task = new WorkTask("w task title", "w task description", "Work", 2);
+	TaskList.createWorkTask(task);
+	TaskList.printTaskList();
+  delete task;
+}
+
+TEST(TaskListTest, printStudyTask)
+{
+	TaskList TaskList;
+	StudyTask* task = new StudyTask("s task title", "s task description", "study", 40);
+	TaskList.createStudyTask(task);
+	TaskList.printTaskList();
+  delete task;
+}
 
 TEST(WorkTask, test1)
 {
@@ -82,6 +118,18 @@ TEST(generalTaskTest, editTaskInfo)
 	delete t;
 }
 
+TEST(TaskListTest, printAllTask)
+{
+	TaskList TaskList;
+	PersonalTask* task = new PersonalTask("p task title", "p task description", "Personal", 1, 20, "March 11");
+	WorkTask* task = new WorkTask("w task title", "w task description", "Work", 2, 30, "March 12");
+	StudyTask* task = new StudyTask("s task title", "s task description", "study", 3, 40, "March 13");
+	TaskList.createPersonalTask(task);
+	TaskList.createWorkTask(task);
+	TaskList.createStudyTask(task);
+	TaskList.printTaskList();
+}
+	
 int main(int argc, char **argv)
 {
 	::testing::InitGoogleTest(&argc, argv);
