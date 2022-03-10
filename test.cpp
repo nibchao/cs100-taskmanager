@@ -1,10 +1,7 @@
 #include "gtest/gtest.h"
+#include "studytask_test.hpp"
 
 
-TEST(SuiteName, TestName)
-{
-	EXPECT_EQ("1", "1");
-}
 
 int main(int argc, char **argv)
 {
