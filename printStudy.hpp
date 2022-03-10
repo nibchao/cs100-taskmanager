@@ -12,12 +12,13 @@ class printStudy : public printTasks
                 printStudy(StudyTask* ptr): pointer(ptr) { }
 		void print()
                 {
-                        cout << pointer->getTitle() << endl;
-                        cout << pointer->getDescription() << endl;
-                        cout << pointer->getClassification() << endl;
-                        cout << pointer->getPriority() << endl;
-                        cout << pointer->getDuration() << endl;
-                        cout << pointer->getDate() << endl << endl;
+			cout << "=Study Task=" << endl;
+                        cout << "Title: " << pointer->getTitle() << endl;
+                        cout << "Description: " << pointer->getDescription() << endl;
+                        cout << "Classification: " << pointer->getClassification() << endl;
+                        cout << "Priority: " << pointer->getPriority() << endl;
+                        cout << "Duration: " << pointer->getDuration() << endl;
+                        cout << "Date: " << pointer->getDate() << endl << endl;
                 }
 };
 
