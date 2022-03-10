@@ -2,10 +2,24 @@
 
 #include "personalTask.cpp"
 #include "generalTask.cpp"
-
+#include "studyTask.cpp"
 #include <string>
 
 using namespace std;
+
+TEST(StudyTaskTest, baserun){
+
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        EXPECT_EQ(task->getDuration(), 40);
+	delete task;
+}
+TEST(StudyTaskTest, secondRun){
+
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        task->setDuration(22);
+        EXPECT_EQ(task->getDuration(), 22);
+	delete task;
+}
 
 TEST(PersonalTaskTest, baserun)
 {
@@ -46,8 +60,8 @@ TEST(generalTaskTest, editTaskInfo)
 	t->editTitle("new title");
 	t->editDescription("new desc");
 	EXPECT_EQ(t->getTitle(), "new title");
-  EXPECT_EQ(t->getDescription(), "new desc");
-  EXPECT_EQ(t->getClassification(), "");
+ 	EXPECT_EQ(t->getDescription(), "new desc");
+	EXPECT_EQ(t->getClassification(), "");
 	delete t;
 }
 
