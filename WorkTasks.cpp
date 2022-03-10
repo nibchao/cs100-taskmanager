@@ -3,11 +3,11 @@
 
 using namespace std;
 
-void WorkTasks::howImportant(int value){
+void WorkTasks::priority(int value){
 	urgency = value;
 }
 
-void WorkTasks::whatState(string str){
+void WorkTasks::state(string str){
 	taskState = str;
 }
 
