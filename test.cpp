@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "studytask_test.hpp"
 
+#include "personaltask_test.hpp"
 
 
 int main(int argc, char **argv)
