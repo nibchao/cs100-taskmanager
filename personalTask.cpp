@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void personalTask::setDate(string newDate)
+void PersonalTask::setDate(string newDate)
 {
 	date = newDate;
 }
 
-string personalTask::getDate()
+string PersonalTask::getDate()
 {
 	return date;
 }
