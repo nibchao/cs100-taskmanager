@@ -2,11 +2,6 @@
 #define __PERSONALTASK_HPP_
 
 #include "generalTask.hpp"
-#include "generalTask.cpp"
-#include <iostream>
-#include <string>
-using namespace std;
-
 
 class PersonalTask : public generalTask{
 private:
