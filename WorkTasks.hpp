@@ -5,23 +5,18 @@ using namespace std;
 
 class WorkTasks: public generalTask {
 private:
-	int urgency;
-	string taskState;
+	int priority;
 public:
-	WorkTasks(string taskStr1, string taskStr2, string taskStr3, string taskStr4, int taskInt1, string taskStr5)
-		: generalTask(taskStr1,taskStr2,taskStr3,taskStr4), urgency(taskInt1), taskState(taskStr5) {}
+	WorkTasks(string taskStr1, string taskStr2, string taskStr3, int taskInt1)
+		: generalTask(taskStr1,taskStr2,taskStr3), priority(taskInt1) {}
 	
 	~WorkTasks(){
-		taskState.clear();
 	}
 	
-	void howImportant(int);
+	void setPriority(int);
 	
-	void whatState(string);
+	int getPriority();
 	
-	int getHowImportant();
-	
-	string getCurrentStatus();
 };
 
 #endif

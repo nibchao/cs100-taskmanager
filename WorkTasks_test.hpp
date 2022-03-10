@@ -5,22 +5,17 @@
 #include "WorkTasks.h"
 
 TEST(WorkTasks, testNum1){
-	WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","attend", 8, 60 , "Oct 24");
-	EXPECT_EQ(8,task->getHowImportant());
-	EXPECT_EQ("did not attend", task->getCurrentStatus());
+	WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","Work", 8);
+	EXPECT_EQ(8,task->getPriority());
 	delete task;
 }
 
 
 TEST(WorkTasks, testNum2){
-        WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","attend", 8, 60 , "Oct 24");
-        task->howImportant(10);
-	EXPECT_EQ(10,task->getHowImportant());
-	task->whatState("in progress");
-        EXPECT_EQ("in progress", task->getCurrentStatus());
+        WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","work", 8);
+        task->setPriority(0);
+	EXPECT_EQ(0,task->getPriority());
 	delete task;
 }
-
-
 
 #endif

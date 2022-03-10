@@ -3,18 +3,10 @@
 
 using namespace std;
 
-void WorkTasks::priority(int value){
-	urgency = value;
+void WorkTasks::setPriority(int value){
+	priority = value;
 }
 
-void WorkTasks::classification(string str){
-	taskState = str;
-}
-
-int WorkTasks::getHowImportant(){
-	return urgency;
-}
-
-string WorkTasks::getCurrentStatus(){
-	return taskState;
+int WorkTasks::getPriority(){
+	return priority;
 }
