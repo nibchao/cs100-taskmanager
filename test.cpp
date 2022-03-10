@@ -1,39 +1,56 @@
 #include "gtest/gtest.h"
 
+#include "WorkTasks.h"
 #include "personalTask.cpp"
 #include "generalTask.cpp"
 #include "studyTask.cpp"
+
 #include <string>
 
 using namespace std;
 
-TEST(StudyTaskTest, baserun){
-
-        StudyTask* task = new StudyTask("title","description", "study", 40);
-        EXPECT_EQ(task->getDuration(), 40);
+TEST(WorkTasks, testNum1)
+{
+	WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","Work", 8);
+	EXPECT_EQ(8,task->getPriority());
 	delete task;
 }
-TEST(StudyTaskTest, secondRun){
 
-        StudyTask* task = new StudyTask("title","description", "study", 40);
-        task->setDuration(22);
-        EXPECT_EQ(task->getDuration(), 22);
+TEST(WorkTasks, testNum2)
+{
+  WorkTasks* task = new WorkTasks("Zoom","Meeting with someone","work", 8);
+  task->setPriority(0);
+	EXPECT_EQ(0,task->getPriority());
+	delete task;
+}
+
+TEST(StudyTaskTest, baserun)
+{
+  StudyTask* task = new StudyTask("title","description", "study", 40);
+  EXPECT_EQ(task->getDuration(), 40);
+	delete task;
+}
+TEST(StudyTaskTest, secondRun)
+{
+  StudyTask* task = new StudyTask("title","description", "study", 40);
+  task->setDuration(22);
+  EXPECT_EQ(task->getDuration(), 22);
 	delete task;
 }
 
 TEST(PersonalTaskTest, baserun)
 {
-        PersonalTask* task = new PersonalTask("title","description", "personal", "March 13");
-        EXPECT_EQ(task->getDate(), "March 13");
-        delete task;
+  PersonalTask* task = new PersonalTask("title","description", "personal", "March 13");
+  EXPECT_EQ(task->getDate(), "March 13");
+  delete task;
 }
 
 TEST(PersonalTaskTest, Secondrun)
 {
-        PersonalTask* task = new PersonalTask("title","description", "Personal", "March 13");
-        task->setDate("January 1");
-        EXPECT_EQ(task->getDate(), "January 1");
-        delete task;
+  PersonalTask* task = new PersonalTask("title","description", "Personal", "March 13");
+  task->setDate("January 1");
+  EXPECT_EQ(task->getDate(), "January 1");
+  delete task;
 }
 
 TEST(generalTaskTest, BlankInputs)
