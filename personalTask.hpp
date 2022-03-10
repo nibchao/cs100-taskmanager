@@ -9,20 +9,16 @@ using namespace std;
 
 
 class PersonalTask : public generalTask{
-
+private:
+	string date;
 public:
-        PersonalTask(std::string title1, std::string des, std::string classif, int prior, int dur, std::string date1): generalTask(title1, des, classif, prior, dur, date1){};
+        PersonalTask(string title1, string des, string classif, string date1): generalTask(title1, des, classif), date(date1){};
 
         ~PersonalTask(){};
 
-        virtual void setClassification(std::string classif2){
-                this->editClassification(classif2);
-                return; };
+	void setDate(string);
 
-
-        virtual void printTask(){return;};
-                //general task not yet implemented so subject to change
+	string getDate();
 };
-                //                //
+
 #endif
-                //
