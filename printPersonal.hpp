@@ -10,14 +10,16 @@ class printPersonal : public printTasks
 		PersonalTask* pointer;
 	public:
 		printPersonal(PersonalTask* ptr): pointer(ptr) { }
+		~printPersonal()
+		{
+			delete pointer;
+		}
 		void print()
                 {
                         cout << "=Personal Task=" << endl;
                         cout << "Title: " << pointer->getTitle() << endl;
                         cout << "Description: " << pointer->getDescription() << endl;
                         cout << "Classification: " << pointer->getClassification() << endl;
-                        cout << "Priority: " << pointer->getPriority() << endl;
-                        cout << "Duration: " << pointer->getDuration() << endl;
                         cout << "Date: " << pointer->getDate() << endl << endl;
                 }
 };

@@ -10,6 +10,10 @@ class printWork : public printTasks
                 WorkTask* pointer;
         public:
                 printWork(WorkTask* ptr): pointer(ptr) { }
+		~printWork()
+		{
+			delete pointer;
+		}
 		void print()
                 {
                         cout << "=Work Task=" << endl;
@@ -17,8 +21,6 @@ class printWork : public printTasks
                         cout << "Description: " << pointer->getDescription() << endl;
                         cout << "Classification: " << pointer->getClassification() << endl;
                         cout << "Priority: " << pointer->getPriority() << endl;
-                        cout << "Duration: " << pointer->getDuration() << endl;
-                        cout << "Date: " << pointer->getDate() << endl << endl;
                 }
 };
 

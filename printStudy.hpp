@@ -10,15 +10,17 @@ class printStudy : public printTasks
                 StudyTask* pointer;
         public:
                 printStudy(StudyTask* ptr): pointer(ptr) { }
+		~printStudy()
+		{
+			delete pointer;
+		}
 		void print()
                 {
 			cout << "=Study Task=" << endl;
                         cout << "Title: " << pointer->getTitle() << endl;
                         cout << "Description: " << pointer->getDescription() << endl;
                         cout << "Classification: " << pointer->getClassification() << endl;
-                        cout << "Priority: " << pointer->getPriority() << endl;
                         cout << "Duration: " << pointer->getDuration() << endl;
-                        cout << "Date: " << pointer->getDate() << endl << endl;
                 }
 };
 
