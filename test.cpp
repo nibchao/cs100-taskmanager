@@ -1,6 +1,20 @@
 #include "gtest/gtest.h"
-#include "studytask_test.hpp"
+#include "studyTask.hpp"
+#include <string>
 
+TEST(StudyTaskTest, baserun){
+
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        EXPECT_EQ(task->getDuration(), 40);
+
+}
+TEST(StudyTaskTest, secondRun){
+
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        task->setDuration(22);
+        EXPECT_EQ(task->getDuration(), 22);
+
+}
 
 
 int main(int argc, char **argv)
