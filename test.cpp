@@ -1,10 +1,8 @@
 #include "gtest/gtest.h"
 
-#include "personalTask.cpp"
 #include "personalTask.hpp"
 
 #include "generalTask.hpp"
-#include "generalTask.cpp"
 
 #include <string>
 
