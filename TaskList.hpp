@@ -8,7 +8,7 @@
 #include "generalTask.cpp"
 
 #include "WorkTask.hpp"
-#include "PersonalTask.hpp"
+#include "personalTask.hpp"
 #include "studyTask.hpp"
 
 #include "printPersonal.hpp"
