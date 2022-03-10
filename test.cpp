@@ -5,42 +5,30 @@
 
 TEST(generalTaskTest, BlankInputs)
 {
-	generalTask* t = new generalTask("", "", "", 0, 0, "");
+	generalTask* t = new generalTask("", "", "");
 	EXPECT_EQ(t->getTitle(), "");
 	EXPECT_EQ(t->getDescription(), "");
 	EXPECT_EQ(t->getClassification(), "");
-	EXPECT_EQ(t->getPriority(), 0);
-	EXPECT_EQ(t->getDuration(), 0);
-	EXPECT_EQ(t->getDate(), "");
 	delete t;
 }
 
 TEST(generalTaskTest, AllInputs)
 {
-	generalTask* t = new generalTask("Title", "Description", "personal", 2, 10, "March");
+	generalTask* t = new generalTask("Title", "Description", "personal");
 	EXPECT_EQ(t->getTitle(), "Title");
 	EXPECT_EQ(t->getDescription(), "Description");
 	EXPECT_EQ(t->getClassification(), "personal");
-	EXPECT_EQ(t->getPriority(), 2);
-	EXPECT_EQ(t->getDuration(), 10);
-	EXPECT_EQ(t->getDate(), "March");
 	delete t;
 }
 
 TEST(generalTaskTest, editTaskInfo)
 {
-	generalTask* t = new generalTask("", "", "", 0, 0, "");
+	generalTask* t = new generalTask("", "", "");
 	t->editTitle("new title");
 	t->editDescription("new desc");
-	t->editPriority(3);
-	t->editDuration(15);
-	t->editDate("jan");
 	EXPECT_EQ(t->getTitle(), "new title");
         EXPECT_EQ(t->getDescription(), "new desc");
         EXPECT_EQ(t->getClassification(), "");
-        EXPECT_EQ(t->getPriority(), 3);
-        EXPECT_EQ(t->getDuration(), 15);
-        EXPECT_EQ(t->getDate(), "jan");
 	delete t;
 }
 
