@@ -7,10 +7,10 @@
 #include "generalTask.hpp"
 #include "generalTask.cpp"
 
-//#include "WorkTasks.hpp"
-#include "WorkTasks.h"
+#include "WorkTasks.hpp"
+//#include "WorkTasks.h"
 #include "PersonalTask.hpp"
-#include "studytask.hpp"
+#include "studyTask.hpp"
 //#include "StudyTask.hpp"
 
 #include "printPersonal.hpp"
