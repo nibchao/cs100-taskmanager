@@ -14,8 +14,6 @@ private:
 public:
 	StudyTask(string title1, string des, string classif, int dur): generalTask(title1, des, classif), duration(dur){};
 
-	~StudyTask(){};
-	
 	void setDuration(int);
 
 	int getDuration();
