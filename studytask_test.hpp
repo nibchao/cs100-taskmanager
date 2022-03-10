@@ -10,16 +10,15 @@ using namespace std;
 
 TEST(StudyTaskTest, baserun){
 
-	StudyTask* task = new StudyTask("title","description", "study", 3, 40, "March 13");
-	task->setClassification("study class");
-	EXPECT_EQ(task->getClassification(), "study class");
+	StudyTask* task = new StudyTask("title","description", "study", 40);
+	EXPECT_EQ(task->getDuration(), 40);
 	
 }
 TEST(StudyTaskTest, secondRun){
 
-        StudyTask* task = new StudyTask("title","description", "study", 3, 40, "March 13");
-        task->setClassification("science");
-        EXPECT_EQ(task->getClassification(), "science");
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        task->setDuration(22);
+        EXPECT_EQ(task->getDuration(), 22);
 
 }
 

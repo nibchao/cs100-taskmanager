@@ -9,19 +9,16 @@ using namespace std;
 
 
 class StudyTask : public generalTask{
-
+private:
+	int duration;
 public:
-	StudyTask(std::string title1, std::string des, std::string classif, int prior, int dur, std::string date1): generalTask(title1, des, classif, prior, dur, date1){};
+	StudyTask(string title1, string des, string classif, int dur): generalTask(title1, des, classif), duration(dur){};
 
 	~StudyTask(){};
 	
-	virtual void setClassification(std::string classif2){
-		this->editClassification(classif2);
-		return; };
+	void setDuration(int);
 
-
-	virtual void printTask(){return;};
-		//general task not yet implemented so subject to change
+	int getDuration();
 };
-		//
+
 #endif
