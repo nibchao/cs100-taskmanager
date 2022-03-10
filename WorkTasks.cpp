@@ -3,19 +3,18 @@
 
 using namespace std;
 
-void WorkTask::howImportant(int importance){
-	urgency = importance;
+void WorkTasks::howImportant(int value){
+	urgency = value;
 }
 
-void WorkTask::whatStatus(string status){
-	condition = status;
+void WorkTasks::whatState(string str){
+	taskState = str;
 }
 
-int WorkTask::getUrgency(){
+int WorkTasks::getHowImportant(){
 	return urgency;
 }
 
-string WorkTask::getCurrentCondition(){
-	return condition;
+string WorkTasks::getCurrentStatus(){
+	return taskState;
 }
-
