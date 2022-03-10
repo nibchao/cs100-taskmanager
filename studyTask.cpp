@@ -1,4 +1,3 @@
-#include "studyTask.hpp"
 
 using namespace std;
 

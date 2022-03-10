@@ -2,7 +2,6 @@
 #define __PRINTSTUDY_HPP__
 
 #include "printTasks.hpp"
-#include "studyTask.hpp"
 
 class printStudy : public printTasks
 {

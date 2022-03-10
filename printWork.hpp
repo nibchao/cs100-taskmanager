@@ -2,7 +2,6 @@
 #define __PRINTWORK_HPP__
 
 #include "printTasks.hpp"
-#include "WorkTask.hpp"
 
 class printWork : public printTasks
 {

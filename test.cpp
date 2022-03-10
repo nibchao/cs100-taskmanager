@@ -1,11 +1,9 @@
 #include "gtest/gtest.h"
 
 #include "TaskList.hpp"
-#include "printTasks.hpp"
 
 #include "WorkTask.cpp"
 #include "personalTask.cpp"
-#include "generalTask.cpp"
 #include "studyTask.cpp"
 
 #include <string>
@@ -21,10 +19,10 @@ TEST(TaskListTest, printBlankTaskList)
 TEST(TaskListTest, printPersonalTask)
 {
 	TaskList TaskList;
-	PersonalTask* task = new PersonalTask("p task title", "p task description", "March 11");
+	PersonalTask* task = new PersonalTask("p task title", "p task description", "Personoal", "March 11");
 	TaskList.createPersonalTask(task);
 	TaskList.printTaskList();
-  delete task;
+  	delete task;
 }
 
 TEST(TaskListTest, printWorkTask)
@@ -33,7 +31,7 @@ TEST(TaskListTest, printWorkTask)
 	WorkTask* task = new WorkTask("w task title", "w task description", "Work", 2);
 	TaskList.createWorkTask(task);
 	TaskList.printTaskList();
-  delete task;
+  	delete task;
 }
 
 TEST(TaskListTest, printStudyTask)
@@ -42,7 +40,7 @@ TEST(TaskListTest, printStudyTask)
 	StudyTask* task = new StudyTask("s task title", "s task description", "study", 40);
 	TaskList.createStudyTask(task);
 	TaskList.printTaskList();
-  delete task;
+  	delete task;
 }
 
 TEST(WorkTask, test1)
@@ -121,13 +119,16 @@ TEST(generalTaskTest, editTaskInfo)
 TEST(TaskListTest, printAllTask)
 {
 	TaskList TaskList;
-	PersonalTask* task = new PersonalTask("p task title", "p task description", "Personal", 1, 20, "March 11");
-	WorkTask* task = new WorkTask("w task title", "w task description", "Work", 2, 30, "March 12");
-	StudyTask* task = new StudyTask("s task title", "s task description", "study", 3, 40, "March 13");
-	TaskList.createPersonalTask(task);
-	TaskList.createWorkTask(task);
-	TaskList.createStudyTask(task);
+	PersonalTask* task1 = new PersonalTask("p task title", "p task description", "Personal", "March 11");
+	WorkTask* task2 = new WorkTask("w task title", "w task description", "Work", 2);
+	StudyTask* task3 = new StudyTask("s task title", "s task description", "study", 40);
+	TaskList.createPersonalTask(task1);
+	TaskList.createWorkTask(task2);
+	TaskList.createStudyTask(task3);
 	TaskList.printTaskList();
+	delete task1;
+	delete task2;
+	delete task3;
 }
 	
 int main(int argc, char **argv)
