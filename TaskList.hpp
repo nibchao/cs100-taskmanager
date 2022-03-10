@@ -67,7 +67,7 @@ class TaskList
 		{
 			delete studyTaskPointer;
 		}
-		void editTask(string taskName, string classification)
+		void editTaskTitle(string taskName, string classification)
 		{
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
@@ -94,6 +94,33 @@ class TaskList
 				}
 			}
 		}
+		void editTaskDescription(string taskName, string classification, string description)
+                {
+                        for (int cnt = 0; cnt < tasklist.size(); cnt++)
+                        {
+                                if ((tasklist.at(cnt)->getTitle() == taskName) && (tasklist.at(cnt)->getDescription() == description))
+                                {
+                                        string newDescription = "";
+                                        string oldDescription = tasklist.at(cnt)->getDescription();
+                                        if (classification == "personal" || classification == "Personal")
+                                        {
+                                                cout << "Enter the personal task's new description: ";
+                                        }
+                                        else if (classification == "work" || classification == "Work")
+                                        {
+                                                cout << "Enter the work task's new description: ";
+                                        }
+                                        else if (classification == "study" || classification == "Study")
+                                        {
+                                                cout << "Enter the study task's new description: ";
+                                        }
+                                        getline(cin, newDescription);
+                                        tasklist.at(cnt)->editDescription(newDescription);
+                                        cout << oldDescription << " description has been changed to " << newDescription << " description." << endl << endl;
+                                        return;
+                                }
+                        }
+                }
 };
 
 #endif

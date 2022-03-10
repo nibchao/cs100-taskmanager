@@ -60,7 +60,13 @@ int main()
 			case 3: // edit task title
 				title = getTaskTitle();
 				classification = getTaskClassification();
-				tasklist->editTask(title, classification);
+				tasklist->editTaskTitle(title, classification);
+				break;
+			case 4: // edit task description
+				title = getTaskTitle();
+				classification = getTaskClassification();
+				description = getTaskDescription();
+				tasklist->editTaskDescription(title, classification, description);
 				break;
 			case 9:
 				cout << "Ending task manager." << endl << endl; 
@@ -83,7 +89,8 @@ int printMainMenu()
 	cout << "===Task Manager Main Menu===" << endl;
 	cout << "1) Add a task" << endl;
 	cout << "2) Print all tasks" << endl;
-	cout << "3) Edit a task" << endl;
+	cout << "3) Edit a task's title" << endl;
+	cout << "4) Edit a task's description" << endl;
 	cout << "9) End program" << endl;	
 
 	cout << "Enter menu option: ";
