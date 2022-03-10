@@ -19,7 +19,7 @@ class printWork : public printTasks
                         cout << "Title: " << pointer->getTitle() << endl;
                         cout << "Description: " << pointer->getDescription() << endl;
                         cout << "Classification: " << pointer->getClassification() << endl;
-                        cout << "Priority: " << pointer->getPriority() << endl;
+                        cout << "Priority: " << pointer->getPriority() << endl << endl;
                 }
 };
 

@@ -19,7 +19,7 @@ class printStudy : public printTasks
                         cout << "Title: " << pointer->getTitle() << endl;
                         cout << "Description: " << pointer->getDescription() << endl;
                         cout << "Classification: " << pointer->getClassification() << endl;
-                        cout << "Duration: " << pointer->getDuration() << endl;
+                        cout << "Duration: " << pointer->getDuration() << endl << endl;
                 }
 };
 

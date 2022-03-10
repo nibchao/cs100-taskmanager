@@ -1,9 +1,9 @@
 #include <iostream>
 #include <sstream>
 #include "TaskList.hpp"
-#include "PersonalTask.hpp"
-#include "WorkTask.hpp"
-#include "StudyTask.hpp"
+#include "personalTask.cpp"
+#include "WorkTask.cpp"
+#include "studyTask.cpp"
 
 using namespace std;
 
@@ -40,17 +40,17 @@ int main()
 				if (classification == "Personal" || classification == "personal")
 				{
 					date = getTaskDate();
-					tasklist->createPersonalTask(new PersonalTask(title, description, classification, date);
+					tasklist->createPersonalTask(new PersonalTask(title, description, classification, date));
 				}
 				else if (classification == "Work" || classification == "work")
 				{
 					priority = getTaskPriority();
-					tasklist->createWorkTask(new WorkTask(title, description, classification, priority);
+					tasklist->createWorkTask(new WorkTask(title, description, classification, priority));
 				}
 				else if (classification == "Study" || classification == "study")
 				{
 					duration = getTaskDuration();
-					tasklist->createStudyTask(new StudyTask(title, description, classification, duration);
+					tasklist->createStudyTask(new StudyTask(title, description, classification, duration));
 				}
 				break;
 			case 2: // prints the tasks in the tasklist
