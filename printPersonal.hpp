@@ -2,7 +2,7 @@
 #define __PRINTPERSONAL_HPP__
 
 #include "printTasks.hpp"
-#include "PersonalTask.hpp"
+#include "personalTask.hpp"
 
 class printPersonal : public printTasks
 {
