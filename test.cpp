@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "WorkTask.hpp"
+#include "WorkTask.cpp"
 #include "personalTask.cpp"
 #include "generalTask.cpp"
 #include "studyTask.cpp"
