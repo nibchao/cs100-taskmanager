@@ -2,12 +2,12 @@
 
 using namespace std;
 
-void studyTask::setDuration(int newDuration)
+void StudyTask::setDuration(int newDuration)
 {
 	duration = newDuration;
 }
 
-int studyTask::getDuration()
+int StudyTask::getDuration()
 {
 	return duration;
 }
