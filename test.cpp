@@ -12,6 +12,7 @@ TEST(generalTaskTest, BlankInputs)
 	EXPECT_EQ(t->getPriority(), 0);
 	EXPECT_EQ(t->getDuration(), 0);
 	EXPECT_EQ(t->getDate(), "");
+	delete t;
 }
 
 TEST(generalTaskTest, AllInputs)
@@ -23,6 +24,7 @@ TEST(generalTaskTest, AllInputs)
 	EXPECT_EQ(t->getPriority(), 2);
 	EXPECT_EQ(t->getDuration(), 10);
 	EXPECT_EQ(t->getDate(), "March");
+	delete t;
 }
 
 TEST(generalTaskTest, editTaskInfo)
@@ -39,6 +41,7 @@ TEST(generalTaskTest, editTaskInfo)
         EXPECT_EQ(t->getPriority(), 3);
         EXPECT_EQ(t->getDuration(), 15);
         EXPECT_EQ(t->getDate(), "jan");
+	delete t;
 }
 
 int main(int argc, char **argv)
