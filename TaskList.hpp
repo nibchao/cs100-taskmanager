@@ -67,6 +67,33 @@ class TaskList
 		{
 			delete studyTaskPointer;
 		}
+		void editTask(string taskName, string classification)
+		{
+			for (int cnt = 0; cnt < tasklist.size(); cnt++)
+			{
+				if (tasklist.at(cnt)->getTitle() == taskName)
+				{
+					string newTitle = "";
+					string oldTitle = tasklist.at(cnt)->getTitle();
+					if (classification == "personal" || classification == "Personal")
+					{
+						cout << "Enter the personal task's new name: ";
+					}
+					else if (classification == "work" || classification == "Work")
+					{
+						cout << "Enter the work task's new name: ";
+                                        }
+					else if (classification == "study" || classification == "Study")
+                                        {
+                                                cout << "Enter the study task's new name: ";
+                                        }
+                                        getline(cin, newTitle);
+                                        tasklist.at(cnt)->editTitle(newTitle);
+                                        cout << oldTitle << " has been renamed to " << newTitle << "." << endl << endl;
+                                        return;
+				}
+			}
+		}
 };
 
 #endif

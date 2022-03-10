@@ -57,6 +57,11 @@ int main()
 				cout << "Printing all tasks in the task list." << endl;
 				tasklist->printTaskList();
 				break;
+			case 3: // edit task title
+				title = getTaskTitle();
+				classification = getTaskClassification();
+				tasklist->editTask(title, classification);
+				break;
 			case 9:
 				cout << "Ending task manager." << endl << endl; 
 				break;
@@ -78,6 +83,7 @@ int printMainMenu()
 	cout << "===Task Manager Main Menu===" << endl;
 	cout << "1) Add a task" << endl;
 	cout << "2) Print all tasks" << endl;
+	cout << "3) Edit a task" << endl;
 	cout << "9) End program" << endl;	
 
 	cout << "Enter menu option: ";
