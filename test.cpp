@@ -9,14 +9,14 @@
 
 using namespace std;
 
-TEST(WorkTasks, testNum1)
+TEST(WorkTask, test1)
 {
 	WorkTask* task = new WorkTask("Zoom","Meeting with someone","Work", 8);
 	EXPECT_EQ(8,task->getPriority());
 	delete task;
 }
 
-TEST(WorkTasks, testNum2)
+TEST(WorkTask, test2)
 {
 	WorkTask* task = new WorkTask("Zoom","Meeting with someone","work", 8);
   	task->setPriority(0);
