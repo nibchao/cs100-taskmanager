@@ -1,34 +1,22 @@
 #ifndef __WORKTASKS_HPP__
 #define __WORKTASKS_HPP__
 #include "generalTask.hpp"
-#include <string>
-#include <iostream>
 using namespace std;
 
-class WorkTasks{
-	
+class WorkTasks: public generalTask {
 private:
 	int urgency;
-	string condition;
-
+	string taskState;
 public:
-
-	WorkTasks();
-	
-	WorkTasks(string task_A, string task_B, string task_C, int urgency, int, string task_Status){} : generalTask(task_a, task_b, task_c, task_d), urgency(urgency_e), condition(task_F){}
-	
-	~WorkTasks(){
-		condition.clear();
+	WorkTask(string taskStr1, string taskStr2, string taskStr3, string taskStr4, int taskInt1, string taskStr5)
+		: generalTask(taskStr1,taskStr2,taskStr3,taskStr4), urgency(taskInt1), taskState(taskStr5) {}
+	~WorkTask(){
+		taskState.clear();
 	}
-	
 	void howImportant(int);
-	
-	void whatStatus(string);
-	
-	int getUrgency();
-	
-	string getCurrentCondition();
-
+	void whatState(string);
+	int getHowImportant();
+	string getCurrentStatus();
 };
 
 #endif
