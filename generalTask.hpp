@@ -30,7 +30,7 @@ class generalTask
 		void editPriority(int);
 		void editDuration(int);
 		void editDate(string);
-		virtual void setClassification(string) = 0;
+		//virtual void setClassification(string) = 0;
 };
 
 #endif
