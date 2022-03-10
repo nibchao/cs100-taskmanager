@@ -36,21 +36,21 @@ int main()
 			case 1: // add a task by getting the task information
 				title = getTaskTitle();
 				description = getTaskDescription();
-				priority = getTaskPriority();
-				duration = getTaskDuration();
-				date = getTaskDate();
 				classification = getTaskClassification();
 				if (classification == "Personal" || classification == "personal")
 				{
-					tasklist->createPersonalTask(new PersonalTask(title, description, classification, priority, duration, date);
+					date = getTaskDate();
+					tasklist->createPersonalTask(new PersonalTask(title, description, classification, date);
 				}
 				else if (classification == "Work" || classification == "work")
 				{
-					tasklist->createWorkTask(new WorkTask(title, description, classification, priority, duration, date);
+					priority = getTaskPriority();
+					tasklist->createWorkTask(new WorkTask(title, description, classification, priority);
 				}
 				else if (classification == "Study" || classification == "study")
 				{
-					tasklist->createStudyTask(new StudyTask(title, description, classification, priority, duration, date);
+					duration = getTaskDuration();
+					tasklist->createStudyTask(new StudyTask(title, description, classification, duration);
 				}
 				break;
 			case 2: // prints the tasks in the tasklist
@@ -68,7 +68,6 @@ int main()
 		}	
 	}
 	while (input != 9);
-	//TaskList.~TaskList();
 	delete tasklist;
 	return 0;
 }
