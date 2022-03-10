@@ -12,32 +12,38 @@ using namespace std;
 
 TEST(TaskListTest, printBlankTaskList)
 {
-	TaskList TaskList;
-	TaskList.printTaskList();
+	TaskList* tasklist = new TaskList();
+	tasklist->printTaskList();
+	delete tasklist;
 }
 
 TEST(TaskListTest, printPersonalTask)
 {
-	TaskList TaskList;
+	TaskList* tasklist = new TaskList();
 	PersonalTask* task = new PersonalTask("p task title", "p task description", "Personal", "March 11");
-	TaskList.createPersonalTask(task);
-	TaskList.printTaskList();
+	tasklist->createPersonalTask(task);
+	tasklist->printTaskList();
+	task->setDate("");
+	//task->~PersonalTask();
+	delete tasklist;
 }
 
 TEST(TaskListTest, printWorkTask)
 {
-	TaskList TaskList;
+	TaskList* tasklist = new TaskList();
 	WorkTask* task = new WorkTask("w task title", "w task description", "Work", 2);
-	TaskList.createWorkTask(task);
-	TaskList.printTaskList();
+	tasklist->createWorkTask(task);
+	tasklist->printTaskList();
+	delete tasklist;
 }
 
 TEST(TaskListTest, printStudyTask)
 {
-	TaskList TaskList;
+	TaskList* tasklist = new TaskList();
 	StudyTask* task = new StudyTask("s task title", "s task description", "study", 40);
-	TaskList.createStudyTask(task);
-	TaskList.printTaskList();
+	tasklist->createStudyTask(task);
+	tasklist->printTaskList();
+	delete tasklist;
 }
 
 TEST(WorkTask, test1)
@@ -115,14 +121,17 @@ TEST(generalTaskTest, editTaskInfo)
 
 TEST(TaskListTest, printAllTask)
 {
-	TaskList TaskList;
+	TaskList* tasklist = new TaskList();
 	PersonalTask* task1 = new PersonalTask("p task title", "p task description", "Personal", "March 11");
 	WorkTask* task2 = new WorkTask("w task title", "w task description", "Work", 2);
 	StudyTask* task3 = new StudyTask("s task title", "s task description", "study", 40);
-	TaskList.createPersonalTask(task1);
-	TaskList.createWorkTask(task2);
-	TaskList.createStudyTask(task3);
-	TaskList.printTaskList();
+	tasklist->createPersonalTask(task1);
+	tasklist->createWorkTask(task2);
+	tasklist->createStudyTask(task3);
+	tasklist->printTaskList();
+	task1->setDate("");
+	//task1->~PersonalTask();
+	delete tasklist;
 }
 	
 int main(int argc, char **argv)

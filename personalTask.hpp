@@ -8,6 +8,10 @@ private:
 	string date;
 public:
         PersonalTask(string title1, string des, string classif, string date1): generalTask(title1, des, classif), date(date1){};
+	~PersonalTask()
+	{
+		date.clear();
+	}
 
 	void setDate(string);
 

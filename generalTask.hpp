@@ -14,7 +14,12 @@ class generalTask
 		string classification;
 	public:
 		generalTask(string, string, string);
-		~generalTask() { };
+		~generalTask()
+		{
+			title.clear();
+			description.clear();
+			classification.clear();
+		};
 		string getTitle();
 		string getDescription();
 		string getClassification();
