@@ -7,17 +7,16 @@ using namespace std;
 
 TEST(PersonalTaskTest, baserun){
 
-        PersonalTask* task = new PersonalTask("title","description", "Personal", 3, 40, "March 13");
-        task->setClassification("Personal task");
-        EXPECT_EQ(task->getClassification(), "Personal task");
+        PersonalTask* task = new PersonalTask("title","description", "March 13");
+        EXPECT_EQ(task->getDate(), "March 13");
 
 }
 
 TEST(PersonalTaskTest, Secondrun){
 
-        PersonalTask* task = new PersonalTask("title","description", "Personal", 3, 40, "March 13");
-        task->setClassification("Do taxes");
-        EXPECT_EQ(task->getClassification(), "Do taxes");
+        PersonalTask* task = new PersonalTask("title","description", "Personal", "March 13");
+        task->setDate("January 1");
+        EXPECT_EQ(task->getDate(), "January 1");
 
 }
 
