@@ -7,7 +7,7 @@ void WorkTasks::priority(int value){
 	urgency = value;
 }
 
-void WorkTasks::state(string str){
+void WorkTasks::classification(string str){
 	taskState = str;
 }
 
