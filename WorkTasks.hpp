@@ -10,8 +10,6 @@ public:
 	WorkTasks(string taskStr1, string taskStr2, string taskStr3, int taskInt1)
 		: generalTask(taskStr1,taskStr2,taskStr3), priority(taskInt1) {}
 	
-	~WorkTasks(){
-	}
 	
 	void setPriority(int);
 	
