@@ -127,7 +127,7 @@ int getTaskPriority()
 {
 	int taskPriority = 0;
 	string str = "";
-	cout << "Enter the task priority: ";
+	cout << "Enter the work task's priority: ";
 
 	while (getline(cin, str))
 	{
@@ -140,7 +140,7 @@ int getTaskPriority()
 			}
 		}
 		cout << endl << "Error: Invalid task priority. Task priority must be a value greater than 0." << endl;
-		cout << endl << "Enter the task priority: ";
+		cout << endl << "Enter the work task's priority: ";
 	}
 	cout << endl;
 	return taskPriority;
@@ -150,7 +150,7 @@ int getTaskDuration()
 {
 	int taskDuration = 0;
 	string str = "";
-	cout << "Enter the task duration (how many minutes it will take): ";
+	cout << "Enter the study task's duration (how many minutes it will take): ";
 
 	while (getline(cin, str))
 	{
@@ -163,7 +163,7 @@ int getTaskDuration()
 			}
 		}
 		cout << endl << "Error: Invalid task duration. Task duration must be a value greater than 0 minutes." << endl;
-		cout << endl << "Enter the task duration (how many minutes it will take): ";
+		cout << endl << "Enter the study task's duration (how many minutes it will take): ";
 	}
 	cout << endl;
 	return taskDuration;
@@ -172,7 +172,7 @@ int getTaskDuration()
 string getTaskDate()
 {
 	string taskDate = "";
-	cout << "Enther the task date: ";
+	cout << "Enther the personal task date: ";
 	getline(cin, taskDate);
 	cout << endl;
 	return taskDate;
