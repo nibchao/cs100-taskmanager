@@ -2,11 +2,6 @@
 #define __STUDYTASK_HPP_
 
 #include "generalTask.hpp"
-#include "generalTask.cpp"
-#include <iostream>
-#include <string>
-using namespace std;
-
 
 class StudyTask : public generalTask{
 private:
