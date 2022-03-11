@@ -22,16 +22,20 @@
  > * We decided on using this design pattern because it helped us break down the code that we planned to implement for this Task Manager project. The strategy design pattern allows us to split a general task that contains many shared functions into three classifications based on what was given in the project prompt. We can then make each of these tasks unique in their own classes and make them fit as necessary. It also allows us to split up the TaskList class into smaller individual Tasks which helps to break down the specific code for TaskList/Task into their own classes. Both of these should help us to write better code because we will not be repeating the same functions over and over in each type of task classification and will not be coding everything inside just a single Task or TaskList class. The strategy design pattern also let us make each task have a unique print task output.
 
  ## Final deliverable
- > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
+
  ## Screenshots
- > Screenshots of the input/output after running your application
+ > Screenshots of the input/output
+ > ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/screenshot1.png?raw=true)
+ > ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/screenshot2.png?raw=true)
+ > ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/screenshot3.png?raw=true)
+ > ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/screenshot4.png?raw=true)
  ## Installation/Usage
- > Instructions on installing and running your application
+ > Clone the repository recursively (for googletest), run cmake to create the main executable, and run in the terminal using ./main
+ > 
+ > Input a number to choose a menu option; 1 will create a task, 2 will print all created tasks, 3 will let you edit a task's title, 4 will let you edit a task's description, 5 will let you edit a task's classification, and 9 will end the program.
+ > * For option 5, you can create hybrid tasks which at the moment, will not change to be a new task entirely so there is no option to add/edit its date/priority/duration.
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > ![Alt text](https://github.com/cs100/final-project-nchao006-etapi017-dgroz002-jgonz503/blob/master/valgrind.png?raw=true)
+ > The project was tested using googletest to test the functions for each base class such as the three task classification classes, the general task, and task list. A CI badge was used to show our unit tests passing using GitHub workflows. Valgrind was used to ensure no memory leaks which is shown in the screenshot.
  
