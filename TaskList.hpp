@@ -35,6 +35,11 @@ class TaskList
 		}
 		void printTaskList()
 		{
+			if (tasklist.size() == 0)
+			{
+				cout << "Task list was empty." << endl << endl;
+				return;
+			}
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
 				printtask.at(cnt)->print();
@@ -93,6 +98,7 @@ class TaskList
                                         return;
 				}
 			}
+			cout << "Task with title of " << taskName << " and classification " << classification << " was not found." << endl << endl;
 		}
 		void editTaskDescription(string taskName, string classification, string description)
                 {
@@ -120,6 +126,44 @@ class TaskList
                                         return;
                                 }
                         }
+			cout << "Task with title of " << taskName << ", description of " << description << " and classification " << classification << " was not found." << endl << endl;
+                }
+		void editTaskClassification(string taskName, string classification)
+                {
+                        for (int cnt = 0; cnt < tasklist.size(); cnt++)
+                        {
+                                if (tasklist.at(cnt)->getTitle() == taskName)
+                                {
+                                        string newClassification = "";
+                                        string oldClassification = tasklist.at(cnt)->getClassification();
+					cout << "Changing a task's classification can create hybrid tasks. An example is making a personal task with a priority field(unique to work tasks)." << endl;
+                                        if (classification == "personal" || classification == "Personal")
+                                        {
+                                                cout << "Enter the personal task's new classification: ";
+                                        }
+                                        else if (classification == "work" || classification == "Work")
+                                        {
+                                                cout << "Enter the work task's new classification: ";
+                                        }
+                                        else if (classification == "study" || classification == "Study")
+                                        {
+                                                cout << "Enter the study task's new classification: ";
+                                        }
+                                        getline(cin, newClassification);
+					while (newClassification != "Personal" && newClassification != "personal" &&
+						newClassification != "Work" && newClassification != "work" &&
+						newClassification != "Study" && newClassification != "study")
+					{
+						cout << endl << "Error: Invalid classification. Accepted classifications are [Personal, Work, Study]." << endl << endl;
+						cout << "Enter the " << oldClassification << " task's new classification: ";
+						getline(cin, newClassification);
+					}
+                                        tasklist.at(cnt)->editClassification(newClassification);
+                                        cout << oldClassification << " classification has been changed to " << newClassification << "." << endl << endl;
+                                        return;
+                                }
+                        }
+			cout << "Task with title of " << taskName << " and classification " << classification << " was not found." << endl << endl;
                 }
 };
 
