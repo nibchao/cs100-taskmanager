@@ -10,6 +10,13 @@
 
 using namespace std;
 
+
+
+
+
+//TaskList
+
+
 TEST(TaskListTest, printBlankTaskList)
 {
 	TaskList* tasklist = new TaskList();
@@ -46,14 +53,26 @@ TEST(TaskListTest, printStudyTask)
 	delete tasklist;
 }
 
-TEST(WorkTask, test1)
+
+//WoekTask
+
+TEST(WorkTask, testgetpriority1)
 {
 	WorkTask* task = new WorkTask("Zoom","Meeting with someone","Work", 8);
 	EXPECT_EQ(8,task->getPriority());
 	delete task;
 }
 
-TEST(WorkTask, test2)
+TEST(WorkTask, testgetpriority2)
+{
+        WorkTask* task = new WorkTask("Zoom","Fire someone","Work", 3);
+        EXPECT_EQ(3,task->getPriority());
+        delete task;
+}
+
+
+
+TEST(WorkTask, testsetpriority1)
 {
 	WorkTask* task = new WorkTask("Zoom","Meeting with someone","work", 8);
   	task->setPriority(0);
@@ -61,13 +80,38 @@ TEST(WorkTask, test2)
 	delete task;
 }
 
-TEST(StudyTaskTest, baserun)
+TEST(WorkTask, testsetpriority2)
+{
+        WorkTask* task = new WorkTask("Zoom","Lunch with investors","work", 8);
+        task->setPriority(4);
+        EXPECT_EQ(4,task->getPriority());
+        delete task;
+}
+
+
+
+
+
+
+//StudyTask
+
+TEST(StudyTaskTest, testgetduration1)
 {
   	StudyTask* task = new StudyTask("title","description", "study", 40);
   	EXPECT_EQ(task->getDuration(), 40);
 	delete task;
 }
-TEST(StudyTaskTest, secondRun)
+
+TEST(StudyTaskTest, testgetduration2)
+{
+        StudyTask* task = new StudyTask("title","description", "study", 35);
+        EXPECT_EQ(task->getDuration(), 35);
+        delete task;
+}
+
+
+
+TEST(StudyTaskTest, testSetduration1)
 {
   	StudyTask* task = new StudyTask("title","description", "study", 40);
   	task->setDuration(22);
@@ -75,20 +119,55 @@ TEST(StudyTaskTest, secondRun)
 	delete task;
 }
 
-TEST(PersonalTaskTest, baserun)
+TEST(StudyTaskTest, testSetduration2)
+{
+        StudyTask* task = new StudyTask("title","description", "study", 40);
+        task->setDuration(45);
+        EXPECT_EQ(task->getDuration(), 45);
+        delete task;
+}
+
+
+
+//PersonalTask
+
+
+TEST(PersonalTaskTest, getDateTest1)
 {
   	PersonalTask* task = new PersonalTask("title","description", "personal", "March 13");
   	EXPECT_EQ(task->getDate(), "March 13");
   	delete task;
 }
 
-TEST(PersonalTaskTest, Secondrun)
+
+TEST(PersonalTaskTest, getDateTest2)
+{
+        PersonalTask* task = new PersonalTask("title","description", "personal", "May 13");
+        EXPECT_EQ(task->getDate(), "May 13");
+        delete task;
+}
+
+
+TEST(PersonalTaskTest, setDateTest1)
 {
   	PersonalTask* task = new PersonalTask("title","description", "Personal", "March 13");
   	task->setDate("January 1");
   	EXPECT_EQ(task->getDate(), "January 1");
   	delete task;
 }
+
+TEST(PersonalTaskTest, setDateTest2)
+{
+        PersonalTask* task = new PersonalTask("title","description", "Personal", "March 13");
+        task->setDate("February 2");
+        EXPECT_EQ(task->getDate(), "February 2");
+        delete task;
+}
+
+
+
+
+
 
 TEST(generalTaskTest, BlankInputs)
 {
