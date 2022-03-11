@@ -72,11 +72,11 @@ class TaskList
 		{
 			delete studyTaskPointer;
 		}
-		void editTaskTitle(string taskName, string classification)
+		void editTaskTitle(string taskName, string classification, string description)
 		{
 			for (int cnt = 0; cnt < tasklist.size(); cnt++)
 			{
-				if (tasklist.at(cnt)->getTitle() == taskName)
+				if ((tasklist.at(cnt)->getTitle() == taskName) && (tasklist.at(cnt)->getDescription() == description))
 				{
 					string newTitle = "";
 					string oldTitle = tasklist.at(cnt)->getTitle();
@@ -98,7 +98,7 @@ class TaskList
                                         return;
 				}
 			}
-			cout << "Task with title of " << taskName << " and classification " << classification << " was not found." << endl << endl;
+			cout << "Task with title of " << taskName << ", description of " << description << " and classification " << classification << " was not found." << endl << endl;
 		}
 		void editTaskDescription(string taskName, string classification, string description)
                 {
@@ -128,15 +128,15 @@ class TaskList
                         }
 			cout << "Task with title of " << taskName << ", description of " << description << " and classification " << classification << " was not found." << endl << endl;
                 }
-		void editTaskClassification(string taskName, string classification)
+		void editTaskClassification(string taskName, string classification, string description)
                 {
                         for (int cnt = 0; cnt < tasklist.size(); cnt++)
                         {
-                                if (tasklist.at(cnt)->getTitle() == taskName)
+                                if ((tasklist.at(cnt)->getTitle() == taskName) && (tasklist.at(cnt)->getDescription() == description))
                                 {
                                         string newClassification = "";
                                         string oldClassification = tasklist.at(cnt)->getClassification();
-					cout << "Changing a task's classification can create hybrid tasks. An example is making a personal task with a priority field(unique to work tasks)." << endl;
+					cout << "Changing a task's classification can create hybrid tasks. An example is making a personal task with a priority field (unique to work tasks)." << endl;
                                         if (classification == "personal" || classification == "Personal")
                                         {
                                                 cout << "Enter the personal task's new classification: ";
@@ -163,8 +163,39 @@ class TaskList
                                         return;
                                 }
                         }
-			cout << "Task with title of " << taskName << " and classification " << classification << " was not found." << endl << endl;
+			cout << "Task with title of " << taskName << ", description of " << description << " and classification " << classification << " was not found." << endl << endl;
                 }
+		/*void editTaskDate(string taskName, string classification, string description)
+                {
+                        for (int cnt = 0; cnt < tasklist.size(); cnt++)
+                        {
+                                if ((tasklist.at(cnt)->getTitle() == taskName) && (tasklist.at(cnt)->getDescription() == description))
+                                {
+                                        string newDate = "";
+                                        string oldDate = tasklist.at(cnt)->getDate();
+					if (oldDate == "")
+					{
+						cout << "Enter the personal task's new date (hybrid task): ";
+					}
+					else
+					{
+                                        	cout << "Enter the personal task's new date: ";
+					}
+                                        getline(cin, newDate);
+                                        tasklist.at(cnt)->setDate(newDate);
+					if (oldDate == "")
+					{
+						cout << taskName << " has the date field added with a date of " << newDate << "." << endl << endl;
+					}
+					else
+					{
+						cout << oldDate << " has been changed to " << newDate << "." << endl << endl;
+					}
+                                        return;
+                                }
+                        }
+			cout << "Task with title of " << taskName << ", description of " << description << " and classification " << classification << " was not found." << endl << endl;
+                }*/ // this is not possible to do, but maybe possible with visitor pattern? not sure
 };
 
 #endif

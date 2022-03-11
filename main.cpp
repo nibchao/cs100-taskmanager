@@ -60,7 +60,8 @@ int main()
 			case 3: // edit task title
 				title = getTaskTitle();
 				classification = getTaskClassification();
-				tasklist->editTaskTitle(title, classification);
+				description = getTaskDescription();
+				tasklist->editTaskTitle(title, classification, description);
 				break;
 			case 4: // edit task description
 				title = getTaskTitle();
@@ -68,11 +69,25 @@ int main()
 				description = getTaskDescription();
 				tasklist->editTaskDescription(title, classification, description);
 				break;
-			case 5: //edit task classification
+			case 5: // edit task classification
 				title = getTaskTitle();
 				classification = getTaskClassification();
-				tasklist->editTaskClassification(title, classification);
+				description = getTaskDescription();
+				tasklist->editTaskClassification(title, classification, description);
 				break;
+			/*case 6: // edit task date
+				title = getTaskTitle();
+				classification = getTaskClassification();
+				description = getTaskDescription();
+				if (classification != "personal" || classification != "Personal")
+				{
+					cout << "Task is not of classification Personal." << endl << endl;
+				}
+				else
+				{
+					tasklist->editTaskDate(title, classification, description);
+				}
+				break;*/ // not possible with current project implementation
 			case 9:
 				cout << "Ending task manager." << endl << endl; 
 				break;
@@ -97,6 +112,7 @@ int printMainMenu()
 	cout << "3) Edit a task's title" << endl;
 	cout << "4) Edit a task's description" << endl;
 	cout << "5) Edit a task's classification (can make hybrid tasks)" << endl;
+	//cout << "6) Edit a personal task's date" << endl;
 	cout << "9) End program" << endl;	
 
 	cout << "Enter menu option: ";
