@@ -16,7 +16,7 @@ class printTask:public generalTask
 
 	public:
 		printTask(printTask* t) : task(t){}	
-		virtual void printTask(printTask* ) = 0;	
+		virtual void print(printTask* ) = 0;	
 
 };
 
